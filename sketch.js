@@ -1,4 +1,4 @@
-let particulas = [];
+particulas = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -9,7 +9,7 @@ function setup() {
   textStyle(BOLD);
   text("CLICKEA PARA MÁS PLACER", 100, 100);
   for (let i = 0; i < 10; i++) {
-    particula = new Particula();
+    particula = new Particula(true);
     particulas.push(particula);
   }
 }
@@ -19,4 +19,11 @@ function draw() {
     particulas[i].update();
     particulas[i].display();
   }
+}
+
+function mousePressed() {
+  let r = random() > 0.5 ? true : false;
+  particula = new Particula(r);
+  particulas.push(particula);
+  print("funciona");
 }
