@@ -8,7 +8,7 @@ function setup() {
   textSize(14);
   textStyle(BOLD);
   text("CLICKEA PARA MÁS PLACER", 100, 100);
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 1; i++) {
     particula = new Particula(true);
     particulas.push(particula);
   }
